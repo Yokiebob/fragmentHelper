@@ -59,8 +59,8 @@ function setUpProgram(program){
   gl.useProgram(program);
   gl.bindVertexArray(vao);
 }
-function drawProgram(...clearColor){
-    gl.clearColor(...clearColor);
+function drawProgram(a,b,c,d){
+    gl.clearColor(a,b,c,d);
     gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.drawTriangles(0,6);
+    gl.drawArrays(gl.TRIANGLES,0,6);
 }
